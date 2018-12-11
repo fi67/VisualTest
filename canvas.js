@@ -13,6 +13,16 @@ myImage.onload = function() {
     ctx.drawImage(myImage, 0, 0, myCanvas.width, myCanvas.height);
 }; 
 
-function changeImage(){}
+function changeImage(){
+  let myRandom=Math.floor(Math.random() * 9) + 1;
+myImage.src="images/" + myRandom + ".jpg";
+myImage.onload = function() {
+    myCanvas.width = myImage.width;
+   myCanvas.height = myImage.height;
+    ctx.drawImage(myImage, 0, 0, myCanvas.width, myCanvas.height);
+};  
+    
+}
+
 
 function addFilter(){}
