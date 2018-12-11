@@ -26,7 +26,7 @@ myImage.onload = function() {
 
 
 function addFilter(){
-
+/*
   // Read each pixel out of canvas
   // Array representing, r then g then b values for each pixel
   let imageData = ctx.getImageData(0, 0, myCanvas.width, myCanvas.height);
@@ -46,6 +46,11 @@ for(let i = 0; i < l ; i += 4){
         }
 
       // Write the data back to canvas
-  ctx.putImageData(imageData, 0 , 0);
+  ctx.putImageData(imageData, 0 , 0);*/
+    
+    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); 
+ctx.filter = 'sepia(1)’; 
+ctx.drawImage(myImage, 0, 0, myCanvas.width, myCanvas.height);
+
 }
 
